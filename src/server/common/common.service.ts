@@ -508,7 +508,6 @@ export class CommonService {
     const oldValue = await this.redisService.get('course-config');
     if (oldValue) {
       // @ts-ignore
-      oldValue.a = '1';
       return oldValue;
     }
     const config = {
