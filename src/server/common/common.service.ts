@@ -523,7 +523,7 @@ export class CommonService {
   }
 
   async advertisementImg() {
-    console.log('');
+    console.log('1');
     let result = await this.advertisementMapper.find();
     return result.map((d) => d.img_url);
   }
