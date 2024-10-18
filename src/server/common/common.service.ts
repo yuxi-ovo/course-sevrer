@@ -506,8 +506,9 @@ export class CommonService {
   async config() {
     // 月份从零开始
     const oldValue = await this.redisService.get('course-config');
-    console.log('oldValue', oldValue);
     if (oldValue) {
+      // @ts-ignore
+      oldValue.a = '1';
       return oldValue;
     }
     const config = {
@@ -523,7 +524,6 @@ export class CommonService {
   }
 
   async advertisementImg() {
-    console.log('1');
     let result = await this.advertisementMapper.find();
     return result.map((d) => d.img_url);
   }
