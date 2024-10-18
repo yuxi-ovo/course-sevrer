@@ -511,7 +511,7 @@ export class CommonService {
       return oldValue;
     }
     const config = {
-      start_date: '2024-09-02',
+      start_date: '2024-09-01',
       end_date: '2025-02-20',
       start_month: 9,
       start_day: 2,
@@ -523,7 +523,6 @@ export class CommonService {
   }
 
   async advertisementImg() {
-    console.log(111);
     let result = await this.advertisementMapper.find();
     return result.map((d) => d.img_url);
   }
